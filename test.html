@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>this is test</title>
+        <link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+        <style>
+            #clickout{
+                width:336px;
+                height:280px;
+                left:50%;
+                top:50%;
+                margin-left:-168px;
+                margin-top:-140px;
+                position:fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="grey" style="background:grey;width: 100%;height:100%;z-index:1"></div>
+        <button onclick="func();" style="z-index:2;">click here</button>
+        <div class="alert alert-warning alert-block" id="clickout">
+            <button type="button" class="close" onclick="hidefunc()">&times;</button>
+            <h4><i class="fa fa-bell-alt"></i>Warning!</h4>
+            <p>Best check yo self, you're not looking too good...</p>
+        </div>
+        <script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
+    <script>
+        var clickout=$('#clickout');
+        var grey=$('#grey');
+        clickout.hide();
+        grey.hide();
+        function func(){
+            clickout.show();
+        }
+        function hidefunc(){
+            clickout.hide();
+            // grey.hide();
+        }
+
+
+
+    </script>
+    </body>
+</html>
